@@ -1,5 +1,6 @@
 number_of_days_for_which_cards_were_created:5
 collection_media_path:C:\\Users\\vital\\AppData\\Roaming\\Anki2\\Vitalii Scripter\\collection.media
+anki_connect_url:http://127.0.0.1:8765
 english_deck_name:🫖English
 german_deck_name:🐲German
 italian_deck_name:🤌Italiano
