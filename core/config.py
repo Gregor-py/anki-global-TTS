@@ -49,3 +49,5 @@ class Config:
         # return []
 
         ##ALLES MIT DEBUGGER PRINT DURCHPROBIERT MÜSSTE FUNKTIONIEREN
+
+config = Config("config.txt")
