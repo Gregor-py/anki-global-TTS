@@ -1,0 +1,70 @@
+{
+  "number_of_days_for_which_cards_were_created": 5,
+  "collection_media_path": "C:\\Users\\vital\\AppData\\Roaming\\Anki2\\Vitalii Scripter\\collection.media",
+  "anki_connect_url": "http://127.0.0.1:8765",
+  "english_deck_name": "🫖English",
+  "german_deck_name": "🐲German",
+  "italian_deck_name": "🤌Italiano",
+  "note_types": [
+    {
+      "name": "Basic",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Word",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Audio",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Basic-Audiotype",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Basic-Reversed",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Basic-Reversed-Audiotype",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "📚Basic-Reversed-Audiotype-ExamplesAudio",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "🤩New Era",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "☀️One",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "☀️Two",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Basic-Reversed-Type",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    },
+    {
+      "name": "Type",
+      "text_field": "Word",
+      "audio_field": "Audio"
+    }
+  ]
+}
