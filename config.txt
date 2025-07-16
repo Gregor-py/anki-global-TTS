@@ -4,5 +4,4 @@ english_deck_name:🫖English
 german_deck_name:🐲German
 italian_deck_name:🤌Italiano
 
-note_types:
-Basic|Word|Audio
+note_types:Basic|Word|Audio
