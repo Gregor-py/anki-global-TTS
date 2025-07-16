@@ -17,7 +17,10 @@ class Config:
 
     def get_media_path(self):
         return self.config_data.get('collection_media_path', '')
-    
+
+    def get_anki_connect_url(self):
+        return self.config_data.get('anki_connect_url', '')
+
     def get_english_deck_name(self):
         return self.config_data.get('english_deck_name', '')
 

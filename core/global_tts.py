@@ -1,3 +1,6 @@
+from core.anki_connect import AnkiConnect
+
+
 class GlobalTTS:
     _instance = None
 
@@ -10,6 +13,7 @@ class GlobalTTS:
         if not hasattr(self, '_started'):
             self._started = False
             self.config = config
+            self.anki_connect = AnkiConnect(config.get_anki_connect_url())
 
     def start(self):
         if not self._started:
