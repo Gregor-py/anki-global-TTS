@@ -7,7 +7,7 @@ class AnkiConnect:
         self.anki_connect_url = anki_connect_url
 
     @staticmethod
-    def request(self, action, **params):
+    def request(action, **params):
         return {'action': action, 'params': params, 'version': 6}
 
     def invoke(self, action, **params):
@@ -22,3 +22,4 @@ class AnkiConnect:
         if response['error'] is not None:
             raise Exception(response['error'])
         return response['result']
+
