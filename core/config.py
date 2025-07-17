@@ -11,6 +11,9 @@ class Config:
     def get_days(self):
         return self.config_data.get('number_of_days_for_which_cards_were_created', 1)
 
+    def get_elevenlabs_api_key(self):
+        return self.config_data.get('elevenlabs_api_key', '')
+
     def get_media_path(self):
         return self.config_data.get('collection_media_path', '')
 

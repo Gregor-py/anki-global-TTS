@@ -35,3 +35,10 @@ class Note:
 
     def get_text(self):
         self.get_field(self.note_info.text_field)
+
+
+    def remove_special_spaces(self, field_name):
+        text = self.note_info['fields'][field_name]['value']
+
+        self.note_info['fields'][field_name]['value'] = text.replace('&nbsp', '')
+        anki_connect.invoke('updateNoteFields', note=self.note_info)
