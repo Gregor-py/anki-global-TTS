@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anki Global TTS</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎧 Anki Global TTS</h1>
+            <p>Automatically generate audio for all your Anki cards</p>
+        </header>
+
+        <main>
+            <!-- Deck Selection Section -->
+            <section class="deck-section">
+                <h2>Select Deck</h2>
+                <div class="deck-controls">
+                    <select id="deckSelect">
+                        <option value="">Loading decks...</option>
+                    </select>
+                    <button id="loadCardsBtn" disabled>Load Cards</button>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section">
+                <h2>Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 id="totalCards">0</h3>
+                        <p>Total Cards</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="cardsWithoutAudio">0</h3>
+                        <p>Cards Without Audio</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="cardsWithAudio">0</h3>
+                        <p>Cards With Audio</p>
+                    </div>
+                    <div class="stat-card processing">
+                        <h3 id="processedCards">0</h3>
+                        <p>Processed</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Batch Processing Section -->
+            <section class="processing-section">
+                <h2>Audio Generation</h2>
+                <div class="processing-controls">
+                    <div class="language-selection">
+                        <label for="batchLanguageSelect">Language:</label>
+                        <select id="batchLanguageSelect">
+                            <option value="en">English</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                        </select>
+                    </div>
+                    <button id="startProcessingBtn" class="process-btn" disabled>
+                        🎵 Generate Audio for All Cards
+                    </button>
+                    <button id="stopProcessingBtn" class="stop-btn" style="display: none;">
+                        ⏹️ Stop Processing
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container" id="progressContainer" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">0 / 0 cards processed</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+
+                <!-- Current Processing -->
+                <div class="current-processing" id="currentProcessing" style="display: none;">
+                    <h3>Currently Processing:</h3>
+                    <div class="current-card">
+                        <p><strong>Card ID:</strong> <span id="currentCardId">-</span></p>
+                        <p><strong>Text:</strong> <span id="currentCardText">-</span></p>
+                        <p><strong>Status:</strong> <span id="currentStatus">-</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards Preview Section -->
+            <section class="cards-section">
+                <h2>Cards Preview</h2>
+                <div class="cards-filter">
+                    <button id="showAllBtn" class="filter-btn active">All Cards</button>
+                    <button id="showNoAudioBtn" class="filter-btn">No Audio Only</button>
+                    <button id="showProcessedBtn" class="filter-btn">Recently Processed</button>
+                </div>
+                <div id="cardsContainer" class="cards-grid">
+                    <p>Select a deck to load cards</p>
+                </div>
+            </section>
+
+            <!-- Log Section -->
+            <section class="log-section">
+                <h2>Processing Log</h2>
+                <div class="log-controls">
+                    <button id="clearLogBtn">Clear Log</button>
+                </div>
+                <div id="logContainer" class="log-container">
+                    <p>Ready to start processing...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
