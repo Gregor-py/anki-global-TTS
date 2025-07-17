@@ -29,4 +29,10 @@ class Config:
     def get_note_types(self):
         return self.config_data.get('note_types', [])
 
+    def get_note_type_by_name(self, name):
+        for note_type in self.get_note_types():
+            if note_type['name'] == name:
+                return note_type
+        return None
+
 config = Config("config.json")
